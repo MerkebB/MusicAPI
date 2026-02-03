@@ -4,9 +4,11 @@ const env = require('dotenv').config();
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('uploads'));
 
 const songRoutes = require('./routes/songRoutes');
+const userRoutes = require('./routes/userRoutes');
 const { default: mongoose } = require('mongoose');
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
@@ -16,6 +18,7 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 })
 
 app.use('/', songRoutes);
+app.use('/', userRoutes);
 
 
 app.listen(process.env.PORT, () => {

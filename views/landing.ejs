@@ -33,6 +33,32 @@
         <input type="text" name="title" placeholder="Enter the title of the song you want to delete" required>
         <button>Delete</button>
     </form>
+    <br><br>
+    <form action="/login" method="POST">
+        <fieldset>
+            <legend>Login</legend>
+            <label for="username">Username</label>
+            <input type="text" name="username" required>
+            <label for="email">Email</label>
+            <input type="text" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <input type="submit" value="Login">
+        </fieldset>
+    </form>
+    <br><br>
+    <form action="/signup" method="POST">
+        <fieldset>
+            <legend>Signup</legend>
+            <label for="username">Username</label>
+            <input type="text" name="username" required>
+            <label for="email">Email</label>
+            <input type="text" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <input type="submit" value="signup">
+        </fieldset>
+    </form>
 </body>
 
 </html>
