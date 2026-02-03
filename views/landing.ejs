@@ -11,6 +11,28 @@
     <form action="/allSongs" method="get">
         <button type="submit">Show all the songs</button>
     </form>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="Song title" required><br><br>
+        <input type="text" name="artist" placeholder="Artist" required><br><br>
+        <input type="file" name="song" accept="audio/*" required><br><br>
+        <button type="submit">Upload</button>
+    </form>
+    <br><br>
+    <form action="/searchbyTitle" method="get">
+        <input type="text" name="title" placeholder="Enter the title of the song" required>
+        <button>Search</button>
+    </form>
+    <br><br>
+    <form action="/update" method="get">
+        <input type="text" name="title" placeholder="Enter the title of the song you want to update" required>
+        <button>update</button>
+    </form>
+    <br><br>
+    <form action="/delete" method="get">
+        <input type="text" name="title" placeholder="Enter the title of the song you want to delete" required>
+        <button>Delete</button>
+    </form>
 </body>
 
 </html>
